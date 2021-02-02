@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+}
+
+.Side_Bar{
+
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+  .Side_Bar_User{
+    background-color: #253141;
+    height: 100px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    .Side_Bar_User_Item{
+      height: 20px;
+      width: 260px;
+      display: flex;
+      justify-content: space-between;
+      .Side_Bar_User_Name{
+        font-size: 16px;
+        font-weight: bold;
+        color: #ffffff;
+      }
+      .Side_Bar_User_Icons{
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+        .botton_1{
+          a {color: #ffffff;
+          }
+        }
+        .botton_2{
+          a {color: #ffffff;
+          }
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  .Side_Bar_Group_List{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    width: 300px;
+  }
+}
+
+.Main_Bar{
+
+  background-color: #ffffff;
+  width: calc(100vw - 300px);
+  height: 100vh;
+  .Main_Chat_Group_Info{
+    background-color: #ffffff;
+    height: 100px;
+    width: calc(100vw - 300px);
+    border: #eeeeee solid 1px;
+  }
+  .Main_Chat_Message_List{
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    width: calc(100vw - 300px);
+  }
+  .Main_Chat_Message_Form{
+    background-color: #d2d2d2;
+    height: 90px;
+    width: calc(100vw - 300px);
+  }
+}
