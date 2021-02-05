@@ -1,4 +1,27 @@
-.Main_Bar
-  .Main_Chat_Group_Info
-  .Main_Chat_Message_List
-  .Main_Chat_Message_Form
+.mainChat
+  .mainChat__groupInfo
+    .text
+      =@group.name
+      .memberName
+        -@group.users.each do |num|
+          =num.name
+    
+    =link_to edit_group_path(@group),class: "edit" do 
+      edit
+
+  .mainChat__messageList
+    = render @messages
+    
+
+
+  
+
+
+  .mainChat__messageForm
+    = form_with model: [@group, @message], html: {class: "mainChat__messageForm__text"}, local: true do |f|
+      .input-box
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
+          = icon('far', 'image', class: 'Form__icon')
+          = f.file_field :image, class: 'input-box__file'
+      = f.submit 'Send', class: 'submit-btn'
